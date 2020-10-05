@@ -25,9 +25,11 @@ kotlin {
       }
     }
     nativeMain {
+      dependsOn commonMain
       dependencies {
         implementation deps.stately.core
         implementation deps.stately.collections
+        implementation deps.stately.concurrency
       }
     }
     nativeTest{}
